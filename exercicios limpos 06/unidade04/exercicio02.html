@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Curso de EcmaScript 6.0</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+        <script type="text/babel">
+            //Obs.: Só pode a ver um escopo pra uma const.
+            const NASCIMENTO = 1992;
+                        
+            function calcularIdade(anoAtual){
+                //não avera erro devido a var está em escopo diferente
+                //var NASCIMENTO = 2000;
+                return anoAtual - NASCIMENTO;
+            }
+
+            console.log(calcularIdade(2018));
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

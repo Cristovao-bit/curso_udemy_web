@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <style>
+            .principal{
+                position: absolute;
+                height: 200px;
+                clip: rect(0 200px 200px 0);
+            }
+            
+            #janela{
+                position:relative; 
+                height:200px;
+                top: 0;
+                left: 0;
+            }
+            
+            #janela img{float: left;}
+        </style>
+
+        <script src="jquery-3.3.1.min.js"></script>       
+        <script>
+            function moverFotos(e) {
+                $("#janela").animate({left: "-=200"}, 1000);
+            };
+
+            $(function (e) {
+                setInterval(moverFotos, 2000);
+            });
+        </script>        
+    </head>
+
+    <body>
+        <div class="principal">
+            <div id="janela">
+                <img src="imagens/foto1.jpg" title="Slide 01" alt="[Slide 01]"/>
+                <img src="imagens/foto2.jpg" title="Slide 02" alt="[Slide 02]"/>
+                <img src="imagens/foto3.jpg" title="Slide 03" alt="[Slide 03]"/>
+                <img src="imagens/foto4.jpg" title="Slide 04" alt="[Slide 04]"/>
+                <img src="imagens/foto5.jpg" title="Slide 05" alt="[Slide 05]"/>
+            </div>
+        </div>
+    </body>
+
+</html>

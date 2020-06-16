@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <style>
+            .principal{
+                position: absolute;
+                height: 200px;
+                clip: rect(0 200px 200px 0);
+            }
+            
+            #janela{
+                position:relative; 
+                height:200px;
+                top: 0;
+                left: 0;
+            }
+            
+            /* Acessoria para saber a posição do elemento */
+            /*.info{
+                position: absolute;
+                top: 300px;
+            }*/
+            
+            #janela img{float: left;}
+        </style>
+
+        <script src="jquery-3.3.1.min.js"></script>       
+        <script>
+            var limite;
+            
+            function moverFotos(e) {
+                $("#janela").animate({left: "-=200"}, 1000, function(e){
+                    //acessorio para sabe a posição do elemento
+                    //$(".info").html($("#janela").position().left);
+                    
+                    if($("#janela").position().left == limite){
+                        $("#janela").css("left",0);
+                    }
+                });
+            };
+
+            $(function (e) {
+                //Quantos objetos eu tenho
+                limite = $("#janela img").length * $("#janela img").width() * -1;
+                //alert(limite);
+                
+                $("#janela").append("<img/>");
+                $("#janela img:last").attr("src", "imagens/foto1.jpg");
+                
+                setInterval(moverFotos, 3000);
+            });
+        </script>        
+    </head>
+
+    <body>
+        <div class="principal">
+            <div id="janela">
+                <img src="imagens/foto1.jpg" title="Slide 01" alt="[Slide 01]"/>
+                <img src="imagens/foto2.jpg" title="Slide 02" alt="[Slide 02]"/>
+                <img src="imagens/foto3.jpg" title="Slide 03" alt="[Slide 03]"/>
+                <img src="imagens/foto4.jpg" title="Slide 04" alt="[Slide 04]"/>
+            </div>
+        </div>
+        
+        <!--Acessoria para saber a posição do elemento-->
+        <div class="info"></div>
+    </body>
+
+</html>

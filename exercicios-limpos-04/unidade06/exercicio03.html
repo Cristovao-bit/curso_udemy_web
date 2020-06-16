@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+
+        <style>
+            #botaoazul{padding: 5px 6px; color: #fff; background-color: blue; border: 1px solid blue; text-transform: uppercase;}
+            #botaoazul:hover{color: #fff; background-color: #6CF; border: 1px solid #6cf; text-transform: uppercase;}
+            #botaovermelho{padding: 5px 6px; color: #fff; background-color: #F00; border: 1px solid #F00; text-transform: uppercase;}
+            #botaovermelho:hover{color: #fff; background-color: #F93; border: 1px solid #F93; text-transform: uppercase;}
+            #botaoverde{padding: 5px 6px; color: #fff; background-color: #066; border: 1px solid #066; text-transform: uppercase;}
+            #botaoverde:hover{color: #fff; background-color: #096; border: 1px solid #096; text-transform: uppercase;}
+            #janela { border:1px solid #666; width:200px; height:200px; margin-top:10px }
+        </style>
+
+        <script src="jquery-3.3.1.min.js"></script>
+        <script>
+            $(function () {
+                $("#botaoazul").on("click", {cor: 'blue', largura:'250px'}, aplicarCor);
+                $("#botaovermelho").on("click", {cor: '#f00', largura:'350px'}, aplicarCor);
+                $("#botaoverde").on("click", {cor: 'green', largura:'450px'}, aplicarCor);
+
+            });
+
+            function aplicarCor(e){
+                $("#janela").css("background-color", e.data.cor);
+                $("#janela").css("width", e.data.largura);
+            };
+        </script>        
+    </head>
+
+    <body>
+        <input type="submit" id="botaoazul" 	value="azul">
+        <input type="submit" id="botaovermelho" value="vermelho">
+        <input type="submit" id="botaoverde" 	value="verde">
+
+        <div id="janela"></div>
+    </body>
+</html>

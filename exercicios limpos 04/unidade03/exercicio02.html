@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title> 
+    </head>
+
+    <body>
+        <nav>
+            <a href="#">Brasil</a>
+            <a href="#">Argentina</a>
+            <a href="#">Uruguai</a>
+            <a href="#">Chile</a>
+            <a href="#">Colombia</a>
+        </nav>
+
+        <!-- scripts -->
+        <script src="jquery-3.3.1.min.js"></script>
+        <script>
+            $(function () {
+                $("nav a").css("color", "#fff");
+                $("nav a").css("text-decoration", "none");
+                $("nav a").css("background-color", "#ccc");
+                $("nav a").css("padding", "5px 10px");
+                $("nav a:hover").css("background-color", "#ddd");
+            });
+        </script>   
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            var saudacao = new Object();
+            saudacao.entrada = "Seja Bem Vindo!";
+            
+            function retornerInfo(){
+                return "Ola! " + this.entrada;
+            }
+            
+            saudacao.info = retornerInfo;
+            
+            alert(saudacao.info());
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

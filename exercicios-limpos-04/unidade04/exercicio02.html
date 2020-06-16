@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+
+        <script src="jquery-3.3.1.min.js"></script>
+        <script>
+            $(function (e) {
+                //.html porque já existe a tag h1 que vai ser adicionada as informações.
+                $("h1").html("Formação Desenvolvimento WEB");
+                //adiciona antes .prepende
+                $("ul#listacursos").prepend("<li>Curso PHP fundamental</li>");
+                //adiciona depois .append
+                $("ul#listacursos").append("<li>Curso BootStrap fundamental</li>");
+            })
+        </script>
+
+    </head>
+
+    <body>
+        <h1></h1>
+
+        <ul id="listacursos">
+            <li>Curso HTML5 Essencial</li>
+            <li>Curso CSS3 Essencial</li>
+            <li>Curso Javascript Essencial</li>
+            <li>Curso jQuery Fundamental</li>
+        </ul>
+
+    </body>
+
+</html>

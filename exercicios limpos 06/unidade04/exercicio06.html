@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso de EcmaScript 6.0</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+        <script type="text/babel">
+            //ao acrescentar os três pontinhos na var dentro de uma var será incrementado sem aparecer um novo array.
+            //esse processo é chamado de Operador Spread
+            var citricas = ["Laranja", "Tangerina", "Limão"];
+            var rosaceae = ["Maçã", "Pêra"];
+            var salada = ["Banana", "Uva", ...citricas, "Mamão", ...rosaceae, "Abacate"];
+            
+            console.log(salada);
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
